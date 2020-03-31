@@ -24,7 +24,7 @@ jobs:
       uses: timheuer/base64-to-file@v1.0.3
       with:
         # Name of the file when written to temp location
-        fileName: YtFlowApp/YtFlowApp_TemporaryKey.pfx
+        fileName: ${{ env.GITHUB_WORKSPACE }}\YtFlowApp\YtFlowApp_TemporaryKey.pfx
         # The base64 encoded string
         encodedString: ${{ secrets.AppKey4GitHub }}
 
@@ -33,7 +33,7 @@ jobs:
 
     # Runs a set of commands using the runners shell
     - name: Run MSBuild
-      run: msbuild YtFlow.sln /p:AppxBundlePlatforms="x64"  /p:AppxPackageDir="AppxPackages" /p:AppxBundle=Never /p:UapAppxPackageBuildMode=SideLoadOnly /p:PackageCertificateKeyFile="YtFlowApp\YtFlowApp_TemporaryKey.pfx"
+      run: msbuild ${{ env.GITHUB_WORKSPACE }}\YtFlowApp\YtFlow.sln /p:AppxBundlePlatforms="x64" /p:AppxPackageDir="AppxPackages" /p:AppxBundle=Never /p:UapAppxPackageBuildMode=SideLoadOnly /p:PackageCertificateKeyFile="${{ env.GITHUB_WORKSPACE }}\YtFlowApp\YtFlowApp_TemporaryKey.pfx"
 
     - name: Upload artifact
       uses: actions/upload-artifact@v1.0.0
