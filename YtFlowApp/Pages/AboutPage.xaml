@@ -30,7 +30,7 @@
             <TextBlock x:Name="buildTxt" Grid.Row="2" Grid.Column="1" VerticalAlignment="Center" Text="Development Mode"/>
             <TextBlock Margin="8" Grid.Row="3" Grid.Column="0" FontWeight="Bold" VerticalAlignment="Center" Text="Source"/>
             <HyperlinkButton Grid.Row="3" Grid.Column="1" VerticalAlignment="Center" NavigateUri="https://github.com/YtFlow/">
-                <TextBlock TextDecorations="Underline" TextWrapping="WrapWholeWords">https://github.com/YtFlow</TextBlock>
+                <TextBlock TextWrapping="WrapWholeWords">https://github.com/YtFlow</TextBlock>
             </HyperlinkButton>
             <TextBlock Margin="8" Grid.Row="4" Grid.Column="0" FontWeight="Bold" Text="Telegram Group"/>
             <HyperlinkButton Grid.Row="4" Grid.Column="1" VerticalAlignment="Center" NavigateUri="https://t.me/YtFlow" Content="YtFlow α"/>

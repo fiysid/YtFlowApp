@@ -23,8 +23,8 @@
                     <StackPanel HorizontalAlignment="Stretch">
                         <StackPanel.ContextFlyout>
                             <MenuFlyout>
-                                <MenuFlyoutItem Text="Set as default" Icon="Favorite" Click="SetDefaultButton_Click"/>
-                                <MenuFlyoutItem Text="Remove" Icon="Delete" Click="RemoveButton_Click"/>
+                                <MenuFlyoutItem Text="Set as default" Click="SetDefaultButton_Click"/>
+                                <MenuFlyoutItem Text="Remove" Click="RemoveButton_Click"/>
                             </MenuFlyout>
                         </StackPanel.ContextFlyout>
                         <TextBlock Text="{x:Bind Name}" Style="{ThemeResource BodyTextBlockStyle}" FontWeight="{x:Bind Path=Path, Converter={StaticResource CurrentConfigToFont}}"/>
